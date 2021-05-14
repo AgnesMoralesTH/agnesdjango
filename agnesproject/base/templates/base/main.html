@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+</head>
+
+<body>
+    <div class="main">
+        <nav id="nav">
+            <p class="logo">Natty</p>
+    
+            <ul class="nav-links">
+                <li><a href="/" class="links">Home</a></li> 
+        <li><a href="/shop" class="links">Shop</a></li>
+        <li><a href="/contact" class="links">Contact</a> </li>
+        <li><a href="/Info" class="links">Info</a></li>
+                
+            </ul>
+    
+            
+        </nav>
+
+
+
+
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+
+
+
+</html>

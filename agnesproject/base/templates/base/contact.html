@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <div class="main">
+        <nav id="nav">
+            <p class="logo">Natty</p>
+    
+            <ul class="nav-links">
+                <li><a href="/" class="links">Home</a></li> 
+        <li><a href="/shop" class="links">Shop</a></li>
+        <li><a href="/contact" class="links">Contact</a> </li>
+        <li><a href="/Info" class="links">Info</a></li>
+                
+            </ul>
+    
+            
+        </nav>
+        <div class="banners">
+            <div class="left">
+                <h1 id="firstword">Hi, let's talk about your project!</h1>
+                <img src="{% static 'images/portrait.png' %}" alt="" id="pook">
+                <h3>Protip — touch on these things:
+    
+    - Your idea
+    - Your timeline
+    - Your budget</h3>
+            </div>
+    
+            <div id="right" class="contact">
+                <section class="contact" id="contact">
+                <div class="container">
+                <h2>Contact</h2>
+                
+                <form method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="form-grid">
+                        <input type="text" name="name" id="name" placeholder="Name" class="form-element" />
+                        <input type="email" name="email" id="email" placeholder="Email" class="form-element" />
+                        <input type="text" name="name" id="name" placeholder="Topic" class="form-element" />
+                        <textarea name="message" id="message" placeholder="Messsage" class="form-area"></textarea>
+                    </div>
+                    <div class="right-align">
+                        <input type="submit" value="Send message" class="button" />
+                    </div>
+                </form>
+                </div>
+                </section>
+            </div>
+        </div>
+    
+    
+    
+    <div class="final"></div>
+    
+    </div>
+</body>
+
+
+</html>
